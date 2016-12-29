@@ -24,11 +24,11 @@ public class BananaRunner {
 			banana.add(new Banana(2, "normal"));
 				
 		Banana maxBanana;
+	
+		int sizeBanana = banana.size();
 		
-		ListIterator<Banana> it = banana.listIterator();
-		
-		for (int i=0; i<banana.size(); i++){
-			for (int j=0; j<banana.size(); j++){
+		for (int i=0; i<sizeBanana; i++){
+			for (int j=0; j<sizeBanana; j++){
 				if (banana.get(i).compareTo(banana.get(j))==1){maxBanana = banana.get(j);
 																banana.set(j,banana.get(i));
 																banana.set(i, maxBanana);}
@@ -36,7 +36,7 @@ public class BananaRunner {
 			
 		}
 		
-		for (int i=0; i<banana.size(); i++){
+		for (int i=0; i<sizeBanana; i++){
 			System.out.println(banana.get(i).toString());
 		}
 		
